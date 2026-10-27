@@ -1,0 +1,9 @@
+# CPU wheels keep the Linux cloud install free of CUDA dependencies.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.14.1+cpu; sys_platform == "linux"
+torch==2.14.1; sys_platform != "linux"
+pypdf==6.10.0
+sentence-transformers==6.2.0
+faiss-cpu==1.15.1
+numpy==2.3.5
+streamlit==1.66.0
