@@ -4,7 +4,9 @@ A resume chatbot built with Python, Streamlit, MiniLM embeddings, FAISS, and a
 Groq-hosted LLM. Visitors can explore Rahul Rajendran's projects, experience,
 skills, and education, with supporting resume passages attached to answers.
 
-**Deployment status:** prepared for Streamlit Community Cloud; live URL pending.
+**Live demo:** [ask-rahul-rag.streamlit.app](https://ask-rahul-rag.streamlit.app/)
+
+Deployed on Streamlit Community Cloud with Python 3.12.
 
 ## How it works
 
@@ -69,8 +71,10 @@ small development-set results, not an independent benchmark or answer accuracy.
 Live evaluation made 14 authorized attempts: 12 responses and two connection
 failures. Latest-per-case status checks matched expectations for 10/12 cases,
 mixing original tests and targeted rechecks. That is not a clean full rerun.
-The tightened project-comparison prompt and one salary case remain unverified
-in the latest live run because of connection failures. Citation validation does
+Those connection failures remain recorded in the Phase 5 results. Two separate
+post-deployment smoke checks subsequently passed: the project comparison cited
+each project's full stack line, and expected salary correctly abstained. These
+checks do not retroactively change the Phase 5 metrics. Citation validation does
 not establish that every generated claim is correct.
 
 Offline tests use fixtures and mocked provider calls. Retrieval checks with the

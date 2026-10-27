@@ -1,7 +1,9 @@
 # Deployment
 
 Target: Streamlit Community Cloud, Python 3.12, `app.py`, branch `master`.
-The public repository and live URL will be recorded after successful deployment.
+Live app: https://ask-rahul-rag.streamlit.app/
+Public repository: https://github.com/rahuldevhub/ask-rahul-rag
+Deployed October 27, 2026.
 
 ## Public contents
 
