@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="750" viewBox="0 0 960 750" role="img" aria-labelledby="title desc">
+<title id="title">Ask Rahul RAG architecture</title>
+<desc id="desc">Local PDF preparation creates a phone-redacted FAISS and metadata bundle. Streamlit embeds each question, retrieves passages, calls Groq, validates citations, and displays an answer or fallback.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10" fill="none" stroke="#397468" stroke-width="1.5"/></marker></defs>
+<rect width="960" height="750" rx="20" fill="#f7f8f4"/>
+<g font-family="Arial, sans-serif" fill="#193c38">
+<text x="40" y="45" font-size="26" font-weight="700">Ask Rahul · evidence to answer</text>
+<text x="40" y="81" font-size="17" font-weight="700">PREPARE LOCALLY</text>
+<text x="540" y="81" font-size="17" font-weight="700">SERVE ON STREAMLIT</text>
+<g fill="#ffffff" stroke="#c8dad1" stroke-width="1.5">
+<rect x="40" y="105" width="360" height="66" rx="12"/>
+<rect x="40" y="210" width="360" height="66" rx="12"/>
+<rect x="40" y="315" width="360" height="66" rx="12"/>
+<rect x="40" y="420" width="360" height="76" rx="12" fill="#e4efe8"/>
+<rect x="540" y="105" width="380" height="66" rx="12"/>
+<rect x="540" y="210" width="380" height="66" rx="12"/>
+<rect x="540" y="315" width="380" height="66" rx="12"/>
+<rect x="540" y="420" width="380" height="66" rx="12"/>
+<rect x="540" y="525" width="380" height="66" rx="12"/>
+<rect x="540" y="630" width="380" height="76" rx="12" fill="#e4efe8"/>
+</g>
+<g font-size="18" font-weight="700" text-anchor="middle">
+<text x="220" y="132">Extract resume PDF</text><text x="220" y="237">Chunk by section and project</text>
+<text x="220" y="342">Embed with MiniLM</text><text x="220" y="448">Reviewed public bundle</text>
+<text x="730" y="132">Question and follow-up topic</text><text x="730" y="237">MiniLM query embedding</text>
+<text x="730" y="342">FAISS top-3 retrieval</text><text x="730" y="447">Groq hosted generation</text>
+<text x="730" y="552">Validate citations</text><text x="730" y="658">Display result with evidence</text>
+</g>
+<g font-size="14" text-anchor="middle" fill="#4f6c62">
+<text x="220" y="153">Keep page provenance; redact phone</text><text x="220" y="258">Token windows for longer passages</text>
+<text x="220" y="363">Pinned encoder · 384 dimensions</text><text x="220" y="472">FAISS vectors + readable passage metadata</text>
+<text x="730" y="153">Ask for clarification when ambiguous</text><text x="730" y="258">Reuse the cached CPU encoder</text>
+<text x="730" y="363">Section routing for explicit list questions</text><text x="730" y="468">Question + passages → structured claims</text>
+<text x="730" y="573">Known IDs · verbatim quotes · phone checks</text><text x="730" y="682">Cited answer, abstention, or passage fallback</text>
+</g>
+<g stroke="#397468" stroke-width="2" fill="none" marker-end="url(#arrow)">
+<path d="M220 171V202"/><path d="M220 276V307"/><path d="M220 381V412"/>
+<path d="M730 171V202"/><path d="M730 276V307"/><path d="M730 381V412"/>
+<path d="M730 486V517"/><path d="M730 591V622"/>
+<path d="M400 458H465V348H532"/>
+</g>
+<text x="40" y="550" font-size="15">The bundle contains readable resume text.</text>
+<text x="40" y="576" font-size="15">The original PDF and API key stay private.</text>
+<text x="40" y="625" font-size="15">Quote validation checks evidence presence.</text>
+<text x="40" y="651" font-size="15">It cannot prove every claim is supported.</text>
+</g></svg>

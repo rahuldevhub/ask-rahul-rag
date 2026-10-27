@@ -20,6 +20,11 @@ Built with Python, Streamlit, MiniLM, FAISS, and a Groq-hosted LLM.
 
 ## Architecture
 
+![Resume preparation and question-answering flow](docs/architecture.svg)
+
+<details>
+<summary>Mermaid diagram source</summary>
+
 ```mermaid
 flowchart TD
     subgraph Prepare[Prepare the resume locally]
@@ -37,6 +42,8 @@ flowchart TD
         Check --> UI[Cited answer, abstention, or evidence fallback]
     end
 ```
+
+</details>
 
 The embedding encoder produces 384-dimensional vectors on CPU. FAISS performs
 exact normalized inner-product search, equivalent to cosine similarity. A JSON
